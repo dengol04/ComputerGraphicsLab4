@@ -28,13 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.drawingPanel = new System.Windows.Forms.PictureBox();
+            this.clearButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.drawingPanel)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // drawingPanel
+            // 
+            this.drawingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.drawingPanel.Location = new System.Drawing.Point(0, 0);
+            this.drawingPanel.Name = "drawingPanel";
+            this.drawingPanel.Size = new System.Drawing.Size(1250, 618);
+            this.drawingPanel.TabIndex = 0;
+            this.drawingPanel.TabStop = false;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearButton.Location = new System.Drawing.Point(1143, 583);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(95, 23);
+            this.clearButton.TabIndex = 3;
+            this.clearButton.Text = "Очистить cцену";
+            this.clearButton.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1250, 618);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.drawingPanel);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.drawingPanel)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox drawingPanel;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
