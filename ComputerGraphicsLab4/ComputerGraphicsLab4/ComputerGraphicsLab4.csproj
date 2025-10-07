@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Matrix3x3.cs" />
     <Compile Include="Polygon.cs" />
     <Compile Include="Vector.cs" />
     <Compile Include="Form1.cs">
