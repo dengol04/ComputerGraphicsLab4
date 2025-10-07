@@ -32,6 +32,26 @@ namespace ComputerGraphicsLab4
             return $"Полигон {Id} ({Vertices.Count} в.) - {status}";
         }
 
+        public Vector2D GetCenter()
+        {
+            float sumX = 0;
+            float sumY = 0;
+            foreach (Vector2D v in Vertices)
+            {
+                sumX += v.X;
+                sumY += v.Y;
+            }
+            return new Vector2D(sumX / Vertices.Count, sumY/ Vertices.Count);
+        }
+
+        public void Transform(Matrix3x3 matrix)
+        {
+            for (int i = 0; i < Vertices.Count; i++)
+            {
+                Vertices[i] = matrix.Multiply(Vertices[i]);
+            }
+        }
+
         public void Draw(Graphics g, bool isBuilding = false)
         {
             if (Vertices.Count == 0) return;
