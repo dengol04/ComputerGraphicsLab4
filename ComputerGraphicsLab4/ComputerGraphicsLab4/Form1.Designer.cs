@@ -35,21 +35,21 @@
             // 
             // drawingPanel
             // 
-            this.drawingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drawingPanel.Location = new System.Drawing.Point(0, 0);
+            this.drawingPanel.BackColor = System.Drawing.Color.White;
+            this.drawingPanel.Location = new System.Drawing.Point(10, 10);
             this.drawingPanel.Name = "drawingPanel";
-            this.drawingPanel.Size = new System.Drawing.Size(1250, 618);
+            this.drawingPanel.Size = new System.Drawing.Size(1225, 560);
             this.drawingPanel.TabIndex = 0;
             this.drawingPanel.TabStop = false;
             // 
             // clearButton
             // 
             this.clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.clearButton.Location = new System.Drawing.Point(1143, 583);
+            this.clearButton.Location = new System.Drawing.Point(1140, 580);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(95, 23);
-            this.clearButton.TabIndex = 3;
-            this.clearButton.Text = "Очистить cцену";
+            this.clearButton.Size = new System.Drawing.Size(95, 25);
+            this.clearButton.TabIndex = 1;
+            this.clearButton.Text = "Очистить сцену";
             this.clearButton.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -63,7 +63,6 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.drawingPanel)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -72,4 +71,3 @@
         private System.Windows.Forms.Button clearButton;
     }
 }
-
