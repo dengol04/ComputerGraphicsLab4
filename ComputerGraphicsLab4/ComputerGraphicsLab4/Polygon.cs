@@ -16,6 +16,8 @@ namespace ComputerGraphicsLab4
         private static int nextId = 1;
         public int Id { get; private set; }
 
+        public bool IsHighlighted { get; set; } = false;
+
         public Polygon()
         {
             Vertices = new List<Vector2D>();
@@ -38,7 +40,9 @@ namespace ComputerGraphicsLab4
 
             Color drawColor = isBuilding ? Color.Red : PolyColor;
 
-            using (var pen = new Pen(drawColor, isBuilding ? 3 : 2))
+            Color outlineColor = IsHighlighted ? Color.Green : drawColor;
+
+            using (var pen = new Pen(outlineColor, isBuilding ? 3 : 2))
             {
                 foreach (var v in Vertices)
                     g.FillEllipse(new SolidBrush(drawColor), v.X - 4, v.Y - 4, 8, 8);
